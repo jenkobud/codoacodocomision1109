@@ -3,59 +3,129 @@ selector{
     propiedad:valor
 }
 */
-body{
-    background-color: rgb(220, 183, 255);
+
+body {
+    background: rgb(255, 245, 253);
 }
-h1,h2{
+
+h1 {
+    color: #7c795d;
+    font-family: 'Trocchi', serif;
+    font-size: 45px;
+    font-weight: normal;
+    line-height: 48px;
     text-align: center;
+    background-color: rgb(211, 211, 211, 0.5);
 }
-header{
+
+h2 {
+    color: #7c795d;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 32px;
+    margin: 0 0 24px;
+}
+
+.subheader {
+    font-size: 26px;
+    font-weight: 300;
+    color: #ffcc66;
+    margin: 0 0 24px;
+}
+
+header {
     background-image: url('../img/header.jpg');
-    height: 150px;
+    height: 250px;
     display: flex;
     justify-content: flex-end;
-    position: fixed;
-    width: 80%;
+    width: 100%;
+    padding-top: 60px;
+    margin-bottom: 3px;
 }
-header h1{
+
+li {
+    color: #4c4a37;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 14px;
+    line-height: 15px;
+    margin: 0 0 5px;
+    align-items: center;
+}
+
+header h1 {
     background-color: rgba(255, 255, 255, 0.616);
     padding: 10px;
     width: 300px;
     height: 50px;
 }
-nav {
-    background-color: transparent;
-    height: 50px;
-    position: fixed;
-    top: 0px;
-    left: 50px;
-}
-nav ol li{
-    background-color: rgb(44, 43, 43);
-    display: inline;
-    color: white;
-    padding: 15px;
-    margin: 0px 10px;
-}
-article{
-   padding-top: 100px;
-   background: linear-gradient(rgba(255, 0, 0, 0.411),rgba(255, 255, 0, 0.52));
-   width: 80%;
-   margin-left: 10%;
-}
-article#casera{
-    background: linear-gradient(rgba(0, 128, 0, 0.424)0, 128, 0, 0.527),rgba(255, 255, 0, 0.582));
+
+p {
+    color: #4c4a37;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+    line-height: 15px;
+    margin: 0 0 5px;
+    text-align: justify;
 }
 
-nav ol li a{
+a {
+    color: rgb(70, 70, 70);
+    text-decoration: none;
+}
+
+
+/*a:hover { color: rgb(150, 150, 150) }*/
+
+nav {
+    background-color: rgb(255, 206, 245, 0.7);
+    position: fixed;
+    display: inline;
+}
+
+nav ul li {
+    border-radius: 3px;
+    padding: 10px;
+    background-color: rgb(255, 157, 235, 0.8);
+    display: inline;
+    margin: 0 10px 10px 0;
+}
+
+article {
+    margin-left: 5%;
+    padding-top: 60px;
+    padding-right: 10px;
+    background: linear-gradient(rgb(238, 184, 184), rgba(255, 255, 0, 0.52));
+    width: 90%;
+}
+
+
+/* style puntual para mi receta*/
+
+article#macarons {
+    justify-content: center;
+    background: rgb(238, 184, 184);
+    padding: 60px 10px 0px 0px;
+    width: 90%;
+    margin: 0 5% 0;
+}
+
+nav ol li a {
     text-decoration: none;
     color: white;
 }
-nav ol li:hover{
-    background-color: rgba(44, 43, 43, 0.418);
-    color: black;
-    box-shadow: 5px 3px 5px black;
+
+nav ul li:hover {
+    border-radius: 5px;
+    background-color: rgb(255, 206, 245, 0.8);
+    box-shadow: 3px 3px 3px rgb(110, 110, 110);
 }
-nav ol li a:hover{
+
+nav ol li a:hover {
     color: black;
+}
+
+img {
+    margin: 5px auto;
 }
