@@ -5,15 +5,18 @@ body{
 .galeria{
     height: calc(500px + 3em);
     width: 550px;
-    border: 3px solid black;
+    border: 3px dashed rgb(69, 186, 253);
     position: relative;
 }
 
 .galeria img{
+    display: block;
     position: absolute;
-    width: 95%;
-    height: 95%;
-    opacity: 0;
+    top: 0px;
+    left: 0px;
+    width: 548px;
+    height: 520px;
+    opacity: 10;
     transition: 3s;
 }
 
@@ -28,5 +31,12 @@ img{
 .galeria input[type=radio]{
     position: relative;
     bottom: calc( -500px -1.5em);
+    left: .5em;
+}
+
+
+.carrusel{
+    position: absolute;
+    top: calc( 500px + 1.5em);
     left: .5em;
 }
