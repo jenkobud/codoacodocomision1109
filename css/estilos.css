@@ -81,7 +81,7 @@ a {
 nav {
     background-color: rgb(255, 206, 245, 0.7);
     position: fixed;
-    display: inline;
+    display: flex;
 }
 
 nav ul li {

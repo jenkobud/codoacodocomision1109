@@ -1,0 +1,32 @@
+body{
+    background-color: rgb(159, 220, 255);
+}
+
+.galeria{
+    height: calc(500px + 3em);
+    width: 550px;
+    border: 3px solid black;
+    position: relative;
+}
+
+.galeria img{
+    position: absolute;
+    width: 95%;
+    height: 95%;
+    opacity: 0;
+    transition: 3s;
+}
+
+.img-container{
+    justify-content: center;
+}
+
+img{
+    width: 550px;
+}
+
+.galeria input[type=radio]{
+    position: relative;
+    bottom: calc( -500px -1.5em);
+    left: .5em;
+}
