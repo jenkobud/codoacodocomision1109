@@ -1,0 +1,19 @@
+body{
+
+}
+
+div#justify{
+    display: flex;
+    /*justify-content: center; Para centrar los hijos*/
+    /*justify-content: flex-end; Posiciona los hijos al final*/
+    /*justify-content: space-between;*/
+    /*justify-content: space-evenly;*/
+    /*justify-content: space-around;*/
+}
+
+.primer{
+    width: 150px;
+    height: 150px;
+    background-color: grey;
+    border: 3px solid black;
+}
