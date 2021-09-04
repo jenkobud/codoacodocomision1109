@@ -1,39 +1,41 @@
+:root{
+    --primary-blue-color: rgb(159, 220, 255);
+    --secondary-blue-color: rgb(69, 186, 253);
+}
+
 body{
-    background-color: rgb(159, 220, 255);
+    background-color: var(--primary-blue-color);
+    justify-content: center;
+    align-content: center;
 }
 
 .galeria{
-    height: calc(500px + 3em);
-    width: 550px;
-    border: 3px dashed rgb(69, 186, 253);
-}
-.carrusel{
-    position: relative;
-    width: inherit;
+    display: flex;
     justify-content: center;
-}
-.galeria img{
-    display: block;
-    position: absolute;
-    width: 98%;
-    top: 0px;
-    left: 0px;
-    border-radius: 3px;
-    opacity: 0;
-    transition: 1s;
 }
 
-.img-container{
-    justify-content: center;
-    width: 548px;
-    /* height: 500px; */
+.galeria-container{
+    width: 550px;
+    height: calc(450px + 2em);
+    border: 1px dashed var(--secondary-blue-color);
+    position: relative;
+}
+
+.galeria img{
+    position: absolute;
+    width: inherit;
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+    transition: 1s;
+    border-radius: 3px;
 }
 
 .galeria input[type=radio]{
-    position: absolute;
-    /* bottom: calc( -500px -1.5em);  */
-    top: calc( 500px);
-    left: .5em;
+    position: relative;
+    bottom: calc( -450px - .3em);
+    /* top: calc( 500px); */
+    left: 1em;
 }
 
 .galeria input[type=radio]:nth-of-type(1):checked ~ img:nth-of-type(1) {

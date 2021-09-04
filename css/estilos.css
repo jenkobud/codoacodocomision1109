@@ -4,8 +4,13 @@ selector{
 }
 */
 
+:root{
+    --background-color: rgb(255, 245, 253);
+    --strong-pink: rgba(255, 157, 235, 0.8);
+}
+
 body {
-    background: rgb(255, 245, 253);
+    background: var(--background-color);
 }
 
 h1 {
@@ -43,6 +48,7 @@ header {
     width: 100%;
     padding-top: 60px;
     margin-bottom: 3px;
+    transition: 1s;
 }
 
 li {
@@ -59,6 +65,7 @@ header h1 {
     padding: 10px;
     width: 300px;
     height: 50px;
+    transition: 1s;
 }
 
 p {
@@ -87,9 +94,23 @@ nav {
 nav ul li {
     border-radius: 3px;
     padding: 10px;
-    background-color: rgb(255, 157, 235, 0.8);
+    background-color: var(--strong-pink);
     display: inline;
     margin: 0 10px 10px 0;
+}
+
+nav ol li a {
+    text-decoration: none;
+    color: white;
+}
+nav ul li:hover {
+    border-radius: 5px;
+    background-color: rgb(255, 206, 245, 0.8);
+    box-shadow: 3px 3px 3px rgb(110, 110, 110);
+}
+
+nav ol li a:hover {
+    color: black;
 }
 
 article {
@@ -111,21 +132,40 @@ article#macarons {
     margin: 0 5% 0;
 }
 
-nav ol li a {
-    text-decoration: none;
-    color: white;
-}
-
-nav ul li:hover {
-    border-radius: 5px;
-    background-color: rgb(255, 206, 245, 0.8);
-    box-shadow: 3px 3px 3px rgb(110, 110, 110);
-}
-
-nav ol li a:hover {
-    color: black;
-}
-
 img {
     margin: 5px auto;
+    align-self: center;
+}
+
+.img-container{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.container{
+    display: block;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+div#to-header{
+    position: fixed;
+    display: flex;
+    bottom: 30px;
+    right: 50px;
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    justify-content: center;
+    border: 3px solid grey;
+    transition: 500ms;
+
+}
+
+div#to-header:hover{
+    box-shadow: 3px 3px 3px rgb(59, 59, 59);
 }
