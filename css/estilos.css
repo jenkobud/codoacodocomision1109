@@ -145,7 +145,6 @@ img {
 
 .container{
     display: block;
-    position: relative;
     justify-content: center;
     align-items: center;
 }
