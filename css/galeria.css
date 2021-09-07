@@ -1,24 +1,28 @@
 :root{
     --primary-blue-color: rgb(159, 220, 255);
     --secondary-blue-color: rgb(69, 186, 253);
+    --thirdary-blue-color: rgb(49, 119, 160);
+    --nav-icons-color: rgba(71, 71, 71,0.7);
 }
 
 body{
     background-color: var(--primary-blue-color);
-    justify-content: center;
-    align-content: center;
 }
 
 .galeria{
     display: flex;
     justify-content: center;
+    top: 70px;
 }
 
 .galeria-container{
     width: 550px;
-    height: calc(450px + 2em);
-    border: 1px dashed var(--secondary-blue-color);
+    height: calc(450px + 1em);
+    border: 1px dashed var(--thirdary-blue-color);
+    border-radius: 15px;
+    background-color: var(--secondary-blue-color);
     position: relative;
+    top: inherit;
 }
 
 .galeria img{
@@ -28,12 +32,12 @@ body{
     left: 0px;
     opacity: 0;
     transition: 1s;
-    border-radius: 3px;
+    border-radius: 15px;
 }
 
 .galeria input[type=radio]{
     position: relative;
-    bottom: calc( -450px - .3em);
+    bottom: calc( -440px);
     /* top: calc( 500px); */
     left: 1em;
 }
@@ -71,3 +75,49 @@ body{
 .galeria input[type=radio]:nth-of-type(11):checked ~ img:nth-of-type(11) {
     opacity: 1;
 }
+
+nav{
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--thirdary-blue-color);
+    height: 40px;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    border-radius: 5px;
+}
+
+a div.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 38px;
+    border-radius: 5px;
+    background-color: var(--nav-icons-color);
+}
+
+a div.button:hover{
+    background-color: gainsboro;
+    transition: 200ms;
+}
+
+div#search-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 100%;
+    background-color: var(--nav-icons-color);
+    border-radius: 5px;
+}
+
+div#search-bar input{
+    height: 90%;
+    width: 94%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 5px;
+}
+
