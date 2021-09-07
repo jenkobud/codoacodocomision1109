@@ -1,0 +1,76 @@
+body{
+    background-color: rgba(111, 62, 139, 0.7);
+}
+
+i{
+    color: white;
+}
+
+@keyframes mover {
+    from{top:250px;}
+    to{top:50px;}
+}
+
+@keyframes angrycreative-mover {
+    from{
+         top: 1500px;
+         left: 100%;
+        }
+    to{
+        top:50px;
+        left: 250px;
+    }
+}
+
+@keyframes color-shifting {
+    from{
+        color: transparent;
+    }
+    to{
+        color: blanchedalmond;
+    }
+}
+
+@keyframes color-shifting-percentage {
+    0%{color: transparent;}
+    25%{color: grey;}
+    50%{color: green;}
+    75%{color: orange;}
+    100%{color: blanchedalmond;}
+}
+
+@keyframes menu {
+    to{
+        background-color: black;
+        color: white;
+        font-size: 30px;
+    }
+}
+
+#handsigns{
+    /*animation: name duration timing-function delay iteration-count direction fill-mode;*/
+    animation: mover 5s;
+    position: absolute;
+}
+
+#angrycreative{
+    position: absolute;
+    left: 250px;
+    animation: angrycreative-mover 5s;
+}
+
+#wheelchair{
+    position: absolute;
+    left: 500px;
+    animation: color-shifting-percentage 5s;
+}
+
+ul li{
+    display: inline;
+    padding: 10px;
+    background-color: white;
+}
+
+ul li:hover{
+    animation: menu 500ms 1;
+}
