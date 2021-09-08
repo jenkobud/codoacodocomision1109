@@ -160,7 +160,7 @@ div#to-header{
     border-radius: 20px;
     background-color: rgb(255, 255, 255);
     justify-content: center;
-    border: 3px solid grey;
+    border: 3px solid rgb(90, 90, 90);
     transition: 500ms;
 
 }
