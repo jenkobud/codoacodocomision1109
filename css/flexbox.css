@@ -1,14 +1,54 @@
 body{
-
+    background-color: aliceblue;
 }
 
-div#justify{
+h1,h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    justify-self: center;
+    transition: 1s;
+}
+
+.bordered{
+    border: 3px dotted goldenrod;
+}
+
+.flex{
     display: flex;
-    /*justify-content: center; Para centrar los hijos*/
-    /*justify-content: flex-end; Posiciona los hijos al final*/
-    /*justify-content: space-between;*/
-    /*justify-content: space-evenly;*/
+    transition: 500ms;
+}
+
+.justify-align-center{
+    justify-content: center; /*Para centrar los hijos en eje x*/
+    align-items: center; /*Para centrar los hijos en eje y*/
     /*justify-content: space-around;*/
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.justify-flex-end{
+    justify-content: flex-end;
+}
+
+.justify-flex-start{
+    justify-content: flex-start;
+}
+
+.justify-flex-space-between{
+    justify-content: space-between;
+}
+
+.justify-flex-space-evenly{
+    justify-content: space-evenly;
+}
+
+.justify-flex-space-around{
+    justify-content: space-around;
+}
+
+.justify-flex-space-around{
+    justify-content: space-around;
 }
 
 .primer{
@@ -16,4 +56,14 @@ div#justify{
     height: 150px;
     background-color: grey;
     border: 3px solid black;
+    margin: 5px;
 }
+
+.item{
+    width: 150px;
+    height: 150px;
+    background-color: coral;
+    border: 2px solid black;
+    margin: 5px;
+    transition: 1s;
+}  
