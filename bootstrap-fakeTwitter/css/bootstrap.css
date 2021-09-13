@@ -95,7 +95,17 @@ a .logo:hover{
   transition: 200ms;
 }
 
-.tweet-icon-container .fas:hover{
+.icon-container-blue:checked{
+  border-radius: 50%;
+}
+.icon-container-blue:hover{
+  background-color: rgba(53, 134, 255,0.2);
+  border-radius: 50%;
+  width: calc(inherit - 20px);
+  height: inherit;
+}
+
+.color-bs-blue, .tweet-icon-container .fas:hover{
   color: var(--bs-blue);
 }
 
@@ -111,6 +121,26 @@ a .logo:hover{
 .visibility-btn:hover{
   border-radius: 20px;
   background-color: rgba(0, 255, 255, 0.2);
+}
+
+.btn-tweet{
+  background-color: var(--bs-blue);
+  border-radius: 20px;
+  color: white;
+}
+
+.btn-tweet:hover{
+  background-color: rgb(14, 76, 209);
+}
+
+.profile-link{
+  color: var(--bs-dark);
+  font-weight: bold;
+}
+
+.profile-link:hover{
+  color: inherit;
+  text-decoration: underline;
 }
 /***********************/
 
