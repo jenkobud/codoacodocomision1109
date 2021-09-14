@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <title>Grid responsive</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <main class="container-fluid">
+    <h1 class="m-4">Grids</h1>
+    <div class="container-fluid border my-2">
+      <div class="row">
+        <div class="col border">
+          Column
+        </div>
+        <div class="col border">
+          Column
+        </div>
+        <div class="col border">
+          Column
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid my-2">
+      <h2>Grid breakpoint template</h2>
+      <table class="table mb-4 border">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">
+              xs<br>
+              <span class="fw-normal">&lt;576px</span>
+            </th>
+            <th scope="col">
+              sm<br>
+              <span class="fw-normal">≥576px</span>
+            </th>
+            <th scope="col">
+              md<br>
+              <span class="fw-normal">≥768px</span>
+            </th>
+            <th scope="col">
+              lg<br>
+              <span class="fw-normal">≥992px</span>
+            </th>
+            <th scope="col">
+              xl<br>
+              <span class="fw-normal">≥1200px</span>
+            </th>
+            <th scope="col">
+              xxl<br>
+              <span class="fw-normal">≥1400px</span>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th class="text-nowrap" scope="row">Container <code class="fw-normal">max-width</code></th>
+            <td>None (auto)</td>
+            <td>540px</td>
+            <td>720px</td>
+            <td>960px</td>
+            <td>1140px</td>
+            <td>1320px</td>
+          </tr>
+          <tr>
+            <th class="text-nowrap" scope="row">Class prefix</th>
+            <td><code>.col-</code></td>
+            <td><code>.col-sm-</code></td>
+            <td><code>.col-md-</code></td>
+            <td><code>.col-lg-</code></td>
+            <td><code>.col-xl-</code></td>
+            <td><code>.col-xxl-</code></td>
+          </tr>
+          <tr>
+            <th class="text-nowrap" scope="row"># of columns</th>
+            <td colspan="6">12</td>
+          </tr>
+          <tr>
+            <th class="text-nowrap" scope="row">Gutter width</th>
+            <td colspan="6">1.5rem (.75rem on left and right)</td>
+          </tr>
+          <tr>
+            <th class="text-nowrap" scope="row">Custom gutters</th>
+            <td colspan="6"><a href="/docs/5.0/layout/gutters/">Yes</a></td>
+          </tr>
+          <tr>
+            <th class="text-nowrap" scope="row">Nestable</th>
+            <td colspan="6"><a href="#nesting">Yes</a></td>
+          </tr>
+          <tr>
+            <th class="text-nowrap" scope="row">Column ordering</th>
+            <td colspan="6"><a href="/docs/5.0/layout/columns/#reordering">Yes</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="container-fluid">
+      <h2>Variable width content</h2>
+      <div class="row justify-content-md-center border">
+        <div class="col col-lg-2 border">
+          1 of 3
+        </div>
+        <div class="col-md-auto border">
+          Variable width content
+        </div>
+        <div class="col col-lg-2 border">
+          3 of 3
+        </div>
+      </div>
+      <div class="row border">
+        <div class="col border">
+          1 of 3
+        </div>
+        <div class="col-md-auto border">
+          Variable width content
+        </div>
+        <div class="col col-lg-2 border">
+          3 of 3
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid border my-2">
+      <div class="row row-cols-3">
+        <div class="col border">Column</div>
+        <div class="col border">Column</div>
+        <div class="col border">Column</div>
+        <div class="col border">Column</div>
+      </div>
+    </div>
+
+    <div class="container-fluid my-2">
+      <div class="row border">
+        <div class="col-sm-3 border">
+          Level 1: .col-sm-3
+        </div>
+        <div class="col-sm-9 border">
+          <div class="row border">
+            <div class="col-8 col-sm-6 border">
+              Level 2: .col-8 .col-sm-6
+            </div>
+            <div class="col-4 col-sm-6 border">
+              Level 2: .col-4 .col-sm-6
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h1 class="m-5">Carousel</h1>
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="../img/20210110_203321.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>First slide label</h5>
+            <p>Some representative placeholder content for the first slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="../img/20210124_202943.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Second slide label</h5>
+            <p>Some representative placeholder content for the second slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="../img/20210212_201124.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Third slide label</h5>
+            <p>Some representative placeholder content for the third slide.</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </main>    
+</body>
+</html>
