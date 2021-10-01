@@ -1,0 +1,13 @@
+:root{
+  --green-strong: #26a846;
+}
+
+.carousel-inner-text {
+    right: 5%;
+    bottom: 20%;
+    left: 40%;
+    color: #fff;
+    text-align: end;
+  }
+
+  .green-strong{ background-color: var(--green-strong); }
