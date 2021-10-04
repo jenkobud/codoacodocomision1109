@@ -48,17 +48,19 @@
           <img src="./media/ba1.jpg" alt="ba1.jpg" class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" 
            focusable="false" style="opacity: 0.5;"/>
           <div class="container">
-            <div class="carousel-caption carousel-inner-text">
-              <h1>Conf Bs As</h1>
-              <p>Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra comunidad
-                el conocimiento y experiencia de los expertos que están creando el futuro de Internet.
-                 Ven a conocer a miembros del evento, a otros estudiantes de Codo a Codo y los oradores de primer
-                 nivel que tenemos para ti. Te esperamos!
-              </p>
-              <p>
-                <a class="btn btn-lg border text-white" href="#">Quiero ser orador</a>
-                <a class="btn btn-lg green-strong text-white" href="#">Comprar tickets</a>
-              </p>
+            <div class="carousel-inner-text row justify-content-end m-0 p-0">
+              <div class="col-lg-6 col-md-10 col-sm-12 p-0 m-0">
+                <h1>Conf Bs As</h1>
+                <p class="text-wrap">Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra comunidad
+                  el conocimiento y experiencia de los expertos que están creando el futuro de Internet.
+                  Ven a conocer a miembros del evento, a otros estudiantes de Codo a Codo y los oradores de primer
+                  nivel que tenemos para ti. Te esperamos!
+                </p>
+                <p class="">
+                  <a class="btn btn-lg btn-outline-light" href="#">Quiero ser orador</a>
+                  <a class="btn btn-lg btn-success green-strong text-white" href="#">Comprar tickets</a>
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -110,8 +112,8 @@
     <section class="container-fluid p-0">
       <div class="card text-white bg-dark my-2 border-0">
         <div class="row g-0">
-          <div class="col-sm-6">
-            <img src="./media/honolulu.jpg" class="img-fluid rounded-start" alt="...">
+          <div class="col-sm-6 d-flex align-content-center">
+            <img src="./media/honolulu.jpg" class="img-fluid" alt="honolulu">
           </div>
           <div class="col-sm-6">
             <div class="card-body">
@@ -119,7 +121,7 @@
               <p class="card-text">
                 Buenos Aires es la provincia y localidad más grande del estado de Argentina, en los Estados Unidos. Honolulu es la más sureña de entre las principales ciudades estadounidenses.
                 Aunque el nombre de Honolulu se refiere al área urbana en la cost asureste de la isla de Oahu, la ciudad y el condado de Honolulu han formado una ciudad-condado consolidada que cubre toda la ciudad 
-                (aproximadamente 600km<span>2</span> de superficie).
+                (aproximadamente 600km<sup>2</sup> de superficie).
               </p>
               <p class="card-text"><button class="btn border text-white">Conocé más</button></p>
             </div>
@@ -131,13 +133,17 @@
       <div class="container text-center">
         <span class="text-uppercase">CONVIÉRTETE EN UN</span>
         <h3 class="font-monospace">ORADOR</h3>
-        <P>Anótate como orador para dar una <span style="text-decoration: underline dotted;">charla ignite</span>. Cuéntanos de qué quieres hablar!</P>
+        <p class="">Anótate como orador para dar una <span style="text-decoration: underline dotted;">charla ignite</span>. Cuéntanos de qué quieres hablar!</p>
       </div>
       <form action="POST">
         <div class="container">
           <div class="row">
-            <div class="col-sm-5 col-xs-12 m-1"><input class="w-100" type="text" name="name" id="name" placeholder="Nombre"/></div>
-            <div class="col-sm-5 col-xs-12 m-1"><input class="w-100" type="text" name="lastname" id="lastname" placeholder="Apellido"/></div>
+            <div class="col-sm-6 col-xs-12 my-1 ps-0"><input class="form-control w-100" type="text" name="name" id="name" placeholder="Nombre"/></div>
+            <div class="col-sm-6 col-xs-12 my-1 pe-0"><input class="form-control w-100" type="text" name="lastname" id="lastname" placeholder="Apellido"/></div>
+          </div>
+          <div class="row">
+              <textarea class="form-control" id="theme" placeholder="Sobre qué quieres hablar?"></textarea>
+              <div id="theme" class="form-text">Recuerda incluir un título para tu charla.</div>
           </div>
         </div>
       </form>

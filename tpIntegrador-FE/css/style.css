@@ -3,11 +3,13 @@
 }
 
 .carousel-inner-text {
-    right: 5%;
+  position: absolute;  
+  right: 5%;
     bottom: 20%;
-    left: 40%;
+    left: 0%;
     color: #fff;
     text-align: end;
   }
 
   .green-strong{ background-color: var(--green-strong); }
+  
