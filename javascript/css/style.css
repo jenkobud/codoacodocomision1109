@@ -3,8 +3,34 @@ body{
     color: silver;
 }
 
+@keyframes glowEffect {
+    8%{background-color: darkgray;
+        color: black;}
+    20%{background-color: whitesmoke;
+            color: lavender;}
+    30%{background-color: darkgray;
+        color: black;}
+    40%{background-color: whitesmoke;
+            color: lavender;}
+    50%{background-color: darkgray;
+        color: black;}
+    60%{background-color: whitesmoke;
+            color: lavender;}
+    70%{background-color: darkgray;
+        color: black;}
+    80%{background-color: whitesmoke;
+            color: lavender;}
+    90%{background-color: darkgray;
+        color: black;}
+    95%{background-color: whitesmoke;
+            color: lavender;}
+    100%{background-color: darkgray;
+        color: black;}
+}
+
 .divider{
-    background-color: darkgray;
+    /*animation: name duration timing-function delay iteration-count direction fill-mode;*/
+    animation: glowEffect 10s infinite;
     height: 10px;
     width: 100%;
 }
