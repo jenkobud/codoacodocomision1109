@@ -1,4 +1,4 @@
-alert("Hola Mundo!");// ventana emergente
+//alert("Hola Mundo!");// ventana emergente
 console.log("Estamos en la consola"); // Consola del navegador
 
 let nombre = "Nombre Nombre";

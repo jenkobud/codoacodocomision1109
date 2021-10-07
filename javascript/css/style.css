@@ -2,3 +2,9 @@ body{
     background-color: rgb(34, 34, 34);
     color: silver;
 }
+
+.divider{
+    background-color: darkgray;
+    height: 10px;
+    width: 100%;
+}
