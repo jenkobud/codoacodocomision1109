@@ -39,6 +39,7 @@
       </div>
     </div>
   </nav>
+  
   <main>
     <!-- Carousel-->
     <section id="myCarousel" class="carousel" data-bs-ride="carousel">
@@ -138,17 +139,34 @@
       <form action="POST">
         <div class="container">
           <div class="row">
-            <div class="col-sm-6 col-xs-12 my-1 ps-0"><input class="form-control w-100" type="text" name="name" id="name" placeholder="Nombre"/></div>
-            <div class="col-sm-6 col-xs-12 my-1 pe-0"><input class="form-control w-100" type="text" name="lastname" id="lastname" placeholder="Apellido"/></div>
+            <div class="col-sm-6 col-xs-12 my-1 p-0 pe-sm-1"><input class="form-control w-100" type="text" name="name" id="name" placeholder="Nombre"/></div>
+            <div class="col-sm-6 col-xs-12 my-1 p-0 ps-sm-1"><input class="form-control w-100" type="text" name="lastname" id="lastname" placeholder="Apellido"/></div>
           </div>
           <div class="row">
               <textarea class="form-control" id="theme" placeholder="Sobre qué quieres hablar?"></textarea>
               <div id="theme" class="form-text">Recuerda incluir un título para tu charla.</div>
+          </div>
+          <div class="row">
+            <button class="btn btn-send w-100">Enviar</button>
           </div>
         </div>
       </form>
 
     </section>
   </main>
+  <!-- FOOTER -->
+  <div class="container-fluid footer">
+    <footer class="container my-2">
+      <ul class="nav justify-content-between align-items-center">
+        <li class="nav-item"><a href="#" class="nav-link text-white"><small>Preguntas<br>frecuentes</small></a></li>
+        <li class="nav-item"><a href="#" class="nav-link text-white"><small>Contáctanos</small></a></li>
+        <li class="nav-item"><a href="#" class="nav-link text-white"><small>Prensa</small></a></li>
+        <li class="nav-item"><a href="#" class="nav-link text-white"><small>Conferencia</small></a></li>
+        <li class="nav-item"><a href="#" class="nav-link text-white"><small>Términos y<br>condiciones</small></a></li>
+        <li class="nav-item"><a href="#" class="nav-link text-white"><small>Privacidad</small></a></li>
+        <li class="nav-item"><a href="#" class="nav-link text-white"><small>Estudiantes</small></a></li>
+      </ul>
+    </footer>
+  </div>
 </body>
 </html>

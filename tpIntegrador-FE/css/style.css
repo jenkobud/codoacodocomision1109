@@ -12,4 +12,21 @@
   }
 
   .green-strong{ background-color: var(--green-strong); }
+
+  .footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(29,55,68);
+    background: linear-gradient(90deg, rgba(29,55,68,1) 0%, rgba(30,83,114,1) 50%);
+    min-height: 80px;
+  }
+
+  .footer-item{
+    display: inline;
+  }
   
+  .btn-send{
+    background-color: #96c93e;
+    color: white;
+  }
