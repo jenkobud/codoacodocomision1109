@@ -20,6 +20,7 @@
     background: rgb(29,55,68);
     background: linear-gradient(90deg, rgba(29,55,68,1) 0%, rgba(30,83,114,1) 50%);
     min-height: 80px;
+    height: max-content;
   }
 
   .footer-item{
@@ -29,6 +30,9 @@
   .btn-send{
     background-color: #96c93e;
     color: white;
+  }
+  .btn-send:hover{
+    background-color: #79a331;
   }
 
   .discount-container{
