@@ -3,8 +3,6 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args){
         Scanner s = new Scanner(System.in);
-        //Nombre, apellido, edad, hobbie, editor de codigo preferido,
-        //SO utilizado -> mostrarlos por consola
         System.out.println("Ingrese su Nombre: ");
         String nombre = s.nextLine();
         System.out.println("Ingrese su Apellido: ");
