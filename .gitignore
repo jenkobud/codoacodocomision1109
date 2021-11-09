@@ -1,3 +1,9 @@
+#ejercicioObligatorioU2 exclusions
 /Java/ejercicioObligatorioU2/.idea
 /Java/ejercicioObligatorioU2/out
 /Java/ejercicioObligatorioU2/ejercicioObligatorioU2.iml
+
+#TomcatServerExample exclusions
+/Java/TomcatServerExample/.idea
+/Java/TomcatServerExample/out
+/Java/TomcatServerExample/TomcatServerExample.iml
