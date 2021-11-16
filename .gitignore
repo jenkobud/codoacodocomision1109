@@ -10,3 +10,5 @@
 
 #BaseDeDatos exclsions
 /Java/BaseDeDatos/target
+/Java/BaseDeDatos/.idea
+/Java/BaseDeDatos/out
