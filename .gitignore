@@ -7,3 +7,6 @@
 /Java/TomcatServerExample/.idea
 /Java/TomcatServerExample/out
 /Java/TomcatServerExample/TomcatServerExample.iml
+
+#BaseDeDatos exclsions
+/Java/BaseDeDatos/target
