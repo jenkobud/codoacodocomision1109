@@ -1,31 +1,34 @@
 import java.sql.*;
 
 public class BaseDeDatos {
-    String driver = "com.mysql.cj.jdbc.Driver";//"com.mysql.jdbc.Driver";
-    public Connection getConection(){
-        Connection c = null;
-        try {
-            Class.forName(driver);
-            c = DriverManager.getConnection("jdbc:mysql://localhost:7070/comision1109","jenko","budnechky01");
-        }catch (SQLException throwables) {
-            throwables.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }
+    private Connection connection;
 
-        return c;
+    public BaseDeDatos(Connection connection) {
+        this.connection = connection;
     }
-    public static void main(String[] args) throws SQLException {
-        BaseDeDatos db = new BaseDeDatos();
-        Connection con = null;
-        con = db.getConection();
-
+    /*
+    * PRE: vars, fromVars, fromValues are all real variables from the DataBase
+    * This function receives "vars" with the variables that we want to select,
+    * the "fromVars" the variables from where the data will be retrieved,}
+    * the "fromValues" the values to that will check with fromVars to retrieve the data.
+    * fromVars & fromValues need to have the same size & same parameter-value index.
+    * POST: returns a ResultSet with the data retrieved, in case of no-data selected
+    * the resultset will be "empty"*/
+    public ResultSet SelectQuery(String[] vars, String[] fromVars, String[] fromValues) throws SQLException {
+        String query = "";
         PreparedStatement ps;
-        ResultSet rs;
-        ps = con.prepareStatement("SELECT * FROM participantes");
-        rs = ps.executeQuery();
+        ps = connection.prepareStatement("SELECT * FROM participantes");
+        return ps.executeQuery();
+    }
 
-        while(rs.next()){
+    public Connection getConnection() { return connection; }
+    public void setConnection(Connection connection) { this.connection = connection; }
+
+    public static void main(String[] args) throws SQLException {
+        Conexion conexion = new Conexion("jdbc:mysql://localhost:7070/comision1109","jenko","budnechky01");
+        BaseDeDatos db = new BaseDeDatos(conexion.getConection());
+
+/*        while(rs.next()){
             int id = rs.getInt("id");
             String nombre = rs.getString("nombre");
             String apellido = rs.getString("apellido");
@@ -38,6 +41,6 @@ public class BaseDeDatos {
             System.out.println("| email -> " + email);
             System.out.println("| tel -> " + telefono);
             System.out.println("+--------------------------------------------------+");
-        }
+        }*/
     }
 }
