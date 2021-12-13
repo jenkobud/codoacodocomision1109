@@ -297,6 +297,7 @@ public class ShowParticipantes extends HttpServlet {
         out.println("                <th scope=\"col\">Nombre</th>");
         out.println("                <th scope=\"col\">e-mail</th>");
         out.println("                <th scope=\"col\">telefono</th>");
+        out.println("                <th scope=\"col\">ABM</th>");
         out.println("              </tr>");
         out.println("            </thead>");
         out.println("            <tbody id=\"tBodyContent\">");
