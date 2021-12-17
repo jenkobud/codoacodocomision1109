@@ -8,7 +8,13 @@
 /Java/TomcatServerExample/out
 /Java/TomcatServerExample/TomcatServerExample.iml
 
-#BaseDeDatos exclsions
+#BaseDeDatos exclusions
 /Java/BaseDeDatos/target
 /Java/BaseDeDatos/.idea
 /Java/BaseDeDatos/out
+
+#tpIntegrador-CRUD exclusions
+/Java/tpIntegrador-CRUD/.idea
+/Java/tpIntegrador-CRUD/.idea/*
+/Java/tpIntegrador-CRUD/target
+/Java/tpIntegrador-CRUD/target/*
