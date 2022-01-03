@@ -18,6 +18,17 @@ public class Partaker {
         this.address = address;
     }
 
+    public Partaker(){
+        this.id = -1;
+        this.names = "";
+        this.lastnames = "";
+        this.age = -1;
+        this.registeredDate = null;
+        this.province = "";
+        this.email = "";
+        this.address = "";
+    }
+
     public String getProvince() {
         return province;
     }

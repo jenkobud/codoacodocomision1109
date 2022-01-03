@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="h-100" lang="es">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </head>
-<body class="h-100">
+<body>
   <nav class="navbar navbar-expand-md navbar-dark bg-dark">
     <div class="container-fluid justify-content-between mx-4">
-      <a class="navbar-brand col-md-3 col-2" href="index.html">  
+      <a class="navbar-brand col-md-3 col-2" href="#">  
         <img src="./media/codoacodo.png" alt="" class="d-inline-block align-text-center" width="100px">Conf Bs As
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,61 +34,19 @@
             <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Conviertete en orador</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-success" type="button" onclick="buyTickets()">Comprar tickets</a>
+            <a class="nav-link text-success" href="#">Comprar tickets</a>
           </li>
       </div>
     </div>
   </nav>
   
-  <main id="contentDisplayer">
+  <main>
     <!-- Carousel-->
     <section id="myCarousel" class="carousel" data-bs-ride="carousel">
       <div class="carousel-inner">
         <!-- Using this one-->
         <div class="carousel-item active" style=" background-color: black;">
-          <img src="./media/ba1.jpg" alt="ba1.jpg" class="bd-placeholder-img" width="100%" height="100%" aria-hidden="true" preserveAspectRatio="xMidYMid slice" 
-           focusable="false" style="opacity: 0.5;"/>
-          <div class="container">
-            <div class="carousel-inner-text row justify-content-end m-0 p-0">
-              <div class="col-lg-6 col-md-10 col-sm-12 p-0 m-0">
-                <h1>Conf Bs As</h1>
-                <p class="text-wrap">Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra comunidad
-                  el conocimiento y experiencia de los expertos que están creando el futuro de Internet.
-                  Ven a conocer a miembros del evento, a otros estudiantes de Codo a Codo y los oradores de primer
-                  nivel que tenemos para ti. Te esperamos!
-                </p>
-                <p class="">
-                  <a class="btn btn-lg btn-outline-light" href="#">Quiero ser orador</a>
-                  <a class="btn btn-lg btn-success green-strong text-white" type="button" onclick="buyTickets()">Comprar tickets</a>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="carousel-item" style=" background-color: black;">
-          <img src="./media/ba2.jpg" alt="ba2.jpg" class="bd-placeholder-img" width="100%" height="100%" aria-hidden="true" preserveAspectRatio="xMidYMid slice" 
-           focusable="false" style="opacity: 0.5;"/>
-          <div class="container">
-            <div class="carousel-inner-text row justify-content-end m-0 p-0">
-              <div class="col-lg-6 col-md-10 col-sm-12 p-0 m-0">
-                <h1>Conf Bs As</h1>
-                <p class="text-wrap">Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra comunidad
-                  el conocimiento y experiencia de los expertos que están creando el futuro de Internet.
-                  Ven a conocer a miembros del evento, a otros estudiantes de Codo a Codo y los oradores de primer
-                  nivel que tenemos para ti. Te esperamos!
-                </p>
-                <p class="">
-                  <a class="btn btn-lg btn-outline-light" href="#">Quiero ser orador</a>
-                  <a class="btn btn-lg btn-success green-strong text-white" href="#">Comprar tickets</a>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="carousel-item" style=" background-color: black;">
-          <img src="./media/ba3.jpg" alt="ba3.jpg" class="bd-placeholder-img" width="100%" height="100%" aria-hidden="true" preserveAspectRatio="xMidYMid slice" 
+          <img src="./media/ba1.jpg" alt="ba1.jpg" class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" 
            focusable="false" style="opacity: 0.5;"/>
           <div class="container">
             <div class="carousel-inner-text row justify-content-end m-0 p-0">
@@ -178,7 +136,7 @@
         <h3 class="font-monospace">ORADOR</h3>
         <p class="">Anótate como orador para dar una <span style="text-decoration: underline dotted;">charla ignite</span>. Cuéntanos de qué quieres hablar!</p>
       </div>
-      <form>
+      <form action="POST">
         <div class="container">
           <div class="row">
             <div class="col-sm-6 col-xs-12 my-1 p-0 pe-sm-1"><input class="form-control w-100" type="text" name="name" id="name" placeholder="Nombre"/></div>
@@ -189,7 +147,7 @@
               <div id="theme" class="form-text">Recuerda incluir un título para tu charla.</div>
           </div>
           <div class="row">
-            <button type="button" class="btn btn-send w-100">Enviar</button>
+            <button class="btn btn-send w-100">Enviar</button>
           </div>
         </div>
       </form>
@@ -197,9 +155,9 @@
     </section>
   </main>
   <!-- FOOTER -->
-  <div class="container-fluid footer mt-auto me-0">
-    <footer class="container ">
-      <ul class="nav justify-content-between align-items-center my-2">
+  <div class="container-fluid footer">
+    <footer class="container my-2">
+      <ul class="nav justify-content-between align-items-center">
         <li class="nav-item"><a href="#" class="nav-link text-white"><small>Preguntas<br>frecuentes</small></a></li>
         <li class="nav-item"><a href="#" class="nav-link text-white"><small>Contáctanos</small></a></li>
         <li class="nav-item"><a href="#" class="nav-link text-white"><small>Prensa</small></a></li>
@@ -210,6 +168,5 @@
       </ul>
     </footer>
   </div>
-  <script src="./js/logic.js"></script>
 </body>
 </html>

@@ -88,7 +88,7 @@
                     <td id="emailId" name="email"><%=p.getEmail()%></td>
                     <td id="addressId" name="address"><%=p.getAddress()%></td>
                     <td><a class="btn btn-warning"
-                           href="/partakers-abm.jsp?partakerId=<%=p.getNames()%>&lastname=<%=p.getLastnames()%>&age=<%=p.getAge()%>&registeredDate=<%=p.getRegisteredDate()%>&state=<%=p.getProvince()%>&email=<%=p.getEmail()%>&address<%=p.getAddress()%>&add=false">Edit</a></td>
+                           href="/partakers-abm.jsp?add=false&partakerId=<%=p.getId()%>&name=<%=p.getNames()%>&lastname=<%=p.getLastnames()%>&age=<%=p.getAge()%>&registeredDate=<%=p.getRegisteredDate()%>&state=<%=p.getProvince()%>&email=<%=p.getEmail()%>&address<%=p.getAddress()%>">Edit</a></td>
                     <td><a class="btn btn-danger" href="#">Remove</a></td>
                 </tr>
         <% } %>
