@@ -16,3 +16,4 @@
 #tpIntegrador-CRUD exclusions
 /Java/tpIntegrador-CRUD/.idea
 /Java/tpIntegrador-CRUD/.idea/*
+/Java/tpIntegrador-CRUD/target/classes/*
