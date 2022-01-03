@@ -87,15 +87,23 @@
                     <td id="stateId" name="state"><%=p.getProvince()%></td>
                     <td id="emailId" name="email"><%=p.getEmail()%></td>
                     <td id="addressId" name="address"><%=p.getAddress()%></td>
-                    <td><a class="btn btn-warning"
-                           href="/partakers-abm.jsp?add=false&partakerId=<%=p.getId()%>&name=<%=p.getNames()%>&lastname=<%=p.getLastnames()%>&age=<%=p.getAge()%>&registeredDate=<%=p.getRegisteredDate()%>&state=<%=p.getProvince()%>&email=<%=p.getEmail()%>&address<%=p.getAddress()%>">Edit</a></td>
+                    <%
+                        String editPartakerUrl = request.getContextPath() + "/partakers-modify.jsp"
+                        + "?add=false&partakerId="+p.getId()+"&name='"+p.getNames()+"'&lastname='"+p.getLastnames()+"'&age="+p.getAge()+
+                                "&registeredDate='"+p.getRegisteredDate()+"'&state='"+p.getProvince()+"'&email='"+p.getEmail()+"'&address='"+p.getAddress()+"'";
+                    %>
+                    <td><a class="btn btn-warning "href="<%=editPartakerUrl%>">Edit</a></td>
                     <td><a class="btn btn-danger" href="#">Remove</a></td>
                 </tr>
         <% } %>
         </tbody>
     </table>
     <div class="flex text-center">
-        <a class="btn btn-lg btn-success">Add new Partaker</a>
+        <%
+            String addNewUrl = request.getContextPath() + "/partakers-modify.jsp"
+                    + "?add=true&partakerId=-1&name=''&lastname=''&age=&registeredDate=''&state=''&email=''&address=''";
+        %>
+        <a href="<%=addNewUrl%>" class="btn btn-lg btn-success">Add new Partaker</a>
     </div>
 </main>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"

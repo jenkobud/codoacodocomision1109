@@ -79,7 +79,7 @@
             for (Partaker p : partakersDAO.getStudents()){
         %>
                 <tr>
-                    <th scope="row"><span class="d-none" id="partakerId" name="partaker"> <%=p.getId()%> </span></th>
+                    <th scope="row"><span class="d-none" id="partakerId" name="partakerId"> <%=p.getId()%> </span></th>
                     <td id="nameId" name="name"><%=p.getNames()%></td>
                     <td id="lastNameId" name="lastName"><%=p.getLastnames()%></td>
                     <td id="ageId" name="age"><%=p.getAge()%></td>
@@ -87,14 +87,23 @@
                     <td id="stateId" name="state"><%=p.getProvince()%></td>
                     <td id="emailId" name="email"><%=p.getEmail()%></td>
                     <td id="addressId" name="address"><%=p.getAddress()%></td>
-                    <td><a class="btn btn-warning" href="#">Edit</a></td>
+                    <%
+                        String editPartakerUrl = request.getContextPath() + "/partakers-modify.jsp"
+                        + "?add=false&partakerId="+p.getId()+"&name='"+p.getNames()+"'&lastname='"+p.getLastnames()+"'&age="+p.getAge()+
+                                "&registeredDate='"+p.getRegisteredDate()+"'&state='"+p.getProvince()+"'&email='"+p.getEmail()+"'&address='"+p.getAddress()+"'";
+                    %>
+                    <td><a class="btn btn-warning "href="<%=editPartakerUrl%>">Edit</a></td>
                     <td><a class="btn btn-danger" href="#">Remove</a></td>
                 </tr>
         <% } %>
         </tbody>
     </table>
     <div class="flex text-center">
-        <a class="btn btn-lg btn-success">Add new Partaker</a>
+        <%
+            String addNewUrl = request.getContextPath() + "/partakers-modify.jsp"
+                    + "?add=true&partakerId=-1&name=''&lastname=''&age=&registeredDate=''&state=''&email=''&address=''";
+        %>
+        <a href="<%=addNewUrl%>" class="btn btn-lg btn-success">Add new Partaker</a>
     </div>
 </main>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
