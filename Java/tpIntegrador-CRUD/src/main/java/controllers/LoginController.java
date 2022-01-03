@@ -80,7 +80,7 @@ public class LoginController extends HttpServlet {
             pw.close();
             return;
         }
-        response.sendRedirect(""); //Redirect to partakerCRUD.jsp REMOVE
+        response.sendRedirect("partaker-abm.jsp"); //Redirect to partakerCRUD.jsp REMOVE
         return;
     }
 }

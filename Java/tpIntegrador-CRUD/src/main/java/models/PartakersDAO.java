@@ -9,13 +9,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PartakersDAO {
-
+    private String[] from = {"participantes"};
     public List<Partaker> getStudents() throws SQLException {
         //SELECT * FROM participantes;
         String[] args = {"*"};
-        String[] from = {"Alumnos"};
         String[] emptyArray = {};
-        ResultSet rs = DataBase.selectionQuery(args, from, emptyArray, emptyArray);
+        ResultSet rs = DataBase.selectionQuery(args, this.from, emptyArray, emptyArray);
         List<Partaker> partakers = new ArrayList<Partaker>();
         String names, lastnames, email, address, province;
         int id, age;
@@ -26,7 +25,7 @@ public class PartakersDAO {
             names = rs.getString("nombre");
             lastnames = rs.getString("apellido");
             email = rs.getString("email");
-            address = rs.getString("addres");
+            address = rs.getString("direccion");
             age = rs.getInt("edad");
             rDate = rs.getDate("fechaIngreso");
             province = rs.getString("provincia");
@@ -39,10 +38,9 @@ public class PartakersDAO {
     public Partaker getStudentById(int id) throws SQLException {
         //SELECT * FROM `participantes` WHERE `participantes`.`id` = id;
         String[] args = {"*"};
-        String[] from = {"participantes"};
         String[] whereArg = {"id"};
         String[] whereVal = {String.valueOf(id)};
-        ResultSet rs = DataBase.selectionQuery(args, from, whereArg, whereVal);
+        ResultSet rs = DataBase.selectionQuery(args, this.from, whereArg, whereVal);
         if (rs.wasNull()) return null;
         String names, lastnames, email, address, province;
         int age;
@@ -50,7 +48,7 @@ public class PartakersDAO {
         names = rs.getString("nombre");
         lastnames = rs.getString("apellido");
         email = rs.getString("email");
-        address = rs.getString("addres");
+        address = rs.getString("direccion");
         age = rs.getInt("edad");
         rDate = rs.getDate("fechaIngreso");
         province = rs.getString("provincia");
@@ -62,9 +60,8 @@ public class PartakersDAO {
         //      `provincia` = 'C.A.B.A.', `email` = 'pepeRojas@services.com', `direccion` = 'Av. Siempre Viva 99' WHERE `participantes`.`id` = 1;
         String[] args = {"*"};
         String[] argsValue = {};
-        String[] from = {"participantes"};
         String[] whereArg = {"id"};
         String[] whereVal = {String.valueOf(id)};
-        DataBase.updateQuery(from, args, argsValue, whereArg, whereVal);
+        DataBase.updateQuery(this.from, args, argsValue, whereArg, whereVal);
     }
 }
