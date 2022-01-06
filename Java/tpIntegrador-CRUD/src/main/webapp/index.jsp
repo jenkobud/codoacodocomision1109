@@ -8,6 +8,8 @@
 <h1><%= "Welcome to the Index page!" %>
 </h1>
 <br/>
-<a href="login.jsp">Log-in</a>
+<%
+    response.sendRedirect(request.getContextPath() + "/login.jsp");
+%>
 </body>
 </html>

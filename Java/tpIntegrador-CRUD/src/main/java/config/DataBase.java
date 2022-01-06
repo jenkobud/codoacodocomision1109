@@ -48,4 +48,26 @@ public class DataBase {
         PreparedStatement pS = _Connection.getConection().prepareStatement(sB.toString());
         pS.executeQuery();
     }
+
+    public static void insertQuery(String from, String[] args, String[] argsValue) throws SQLException {
+        //INSERT INTO `table` (`nombre`, `apellido`, `edad`, `fechaIngreso`, `provincia`, `email`, `direccion`)
+        // VALUES ('Ryan', 'Riñas', '54', current_timestamp(), 'Chubut', 'ryanRiñas@gmail.com', 'Av. Siempre Muerta 102');
+
+        StringBuilder sB = new StringBuilder("INSERT INTO "+ from + " (");
+
+        for(String arg : args){ sB.append("`" + arg + "`,"); }
+        sB.delete(sB.length()-1, sB.length());
+        sB.append(") VALUES (");
+        for(String v : argsValue){ sB.append("'" + v + "',"); }
+        sB.delete(sB.length()-1, sB.length());
+        sB.append(");");
+        PreparedStatement pS = _Connection.getConection().prepareStatement(sB.toString());
+        pS.executeQuery();
+    }
+
+
+    public Boolean deleteQuery(String from, String[] args, String[] argsValue){
+        //DELETE FROM `participantes` WHERE `participantes`.`id` = idValue;
+        return false; //IMPLEMENT DELETE
+    }
 }

@@ -82,7 +82,7 @@
         </div>
         <div class="row flex justify-content-around mt-3">
           <div class="col-4 flex text-center"><button id="upload-button" class="btn btn-lg btn-success">Update</button></div>
-          <div class="col-4 flex text-center"><button class="btn btn-lg btn-danger">Cancel</button></div>
+          <div class="col-4 flex text-center"><a href="javascript:history.back()" class="btn btn-lg btn-danger">Cancel</a></div>
         </div>
       </div>
     </form>
