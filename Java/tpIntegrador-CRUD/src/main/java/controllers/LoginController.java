@@ -25,10 +25,10 @@ public class LoginController extends HttpServlet {
         LoginDAO loginDAO = new LoginDAO();
         String email = request.getParameter("email");
         String password = request.getParameter("password");
-        response.setContentType("text/html");
-        PrintWriter pw = response.getWriter();
         try {
-            if (!loginDAO.isEmailInDB(email) || !loginDAO.isPassOfEmail(email, password)){
+            if (!loginDAO.isEmailInDB(email) || !loginDAO.isPassOfEmail(email, password)) {
+                response.setContentType("text/html");
+                PrintWriter pw = response.getWriter();
                 pw.write("<!DOCTYPE html>");
                 pw.write("<html lang=\"es\">");
                 pw.write("<head>");
@@ -79,9 +79,7 @@ public class LoginController extends HttpServlet {
                 pw.write("    crossorigin=\"anonymous\"></script>");
                 pw.write("</body></html>");
                 pw.close();
-                System.out.println("ENTRE A WRITER");//QUITAR 
-            }
+            }else { response.sendRedirect(request.getContextPath() + "/partakers-abm.jsp"); }
         } catch (SQLException e) { e.printStackTrace(); }
-        response.sendRedirect(request.getContextPath() + "/partakers-abm.jsp");
     }
 }
