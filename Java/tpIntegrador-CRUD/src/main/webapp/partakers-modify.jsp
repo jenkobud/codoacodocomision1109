@@ -37,47 +37,48 @@
   <main class="container text-center">
     <div class="spacer"></div>
     <div class="spacer"></div>
-    <form class="p-2 rounded-3" action="" method="post" style="background-color: cadetblue;">
+    <form class="p-2 rounded-3" action="<%=request.getContextPath()%>/PartakersController" method="post" style="background-color: cadetblue;">
       <div class="container text-white">
         <h2 id="formTitle">Modify Partaker</h2>
       </div>
       <div class="spacer"></div>
       <div class="container flex justify-content-center">
         <!--id(oculto), nombre, apellido, fechaIngreso, edad, email, direccion, provincia-->
-        <span id="partakerId" class="d-none"> ${param.partakerId} </span>
+        <input class="d-none" name="add" value="${param.add}">
+        <input id="partakerId" class="d-none" name="partakerId" value="${param.partakerId}">
         <div class="row">
           <div class="col-6">
             <label for="nameId" class="form-label">Nombre</label>
-            <input id="nameId" type="text" class="form-control" placeholder="Jorge" value=${param.name} aria-label="Nombre"></div>
+            <input id="nameId" type="text" class="form-control" placeholder="Jorge" value=${param.name} aria-label="name" name="name"></div>
           <div class="col-6">
             <label for="apellidoId" class="form-label">Apellido</label>
-            <input id="apellidoId" type="text" class="form-control" placeholder="Lopez" value=${param.lastname} aria-label="Apellido">
+            <input id="apellidoId" type="text" class="form-control" placeholder="Lopez" value=${param.lastname} aria-label="lastname" name="lastname">
           </div>
         </div>
         <div class="row">
           <div class="col-9">
             <label for="fechaId" class="form-label">Fecha de Ingreso</label>
-            <input id="fechaId" type="date" class="form-control" placeholder="2021-11-03 09:52:22" value=${param.registeredDate} aria-label="fecha-ingreso">
+            <input id="fechaId" type="date" class="form-control" placeholder="2021-11-03 09:52:22" value=${param.registeredDate} aria-label="registered-date" name="registered-date">
           </div>
           <div class="col-3">
             <label for="ageId" class="form-label">Edad</label>
-            <input id="ageId" type="number" class="form-control" placeholder="34" value=${param.age} aria-label="edad">
+            <input id="ageId" type="number" class="form-control" placeholder="34" value=${param.age} aria-label="age" name="age">
           </div>
         </div>
         <div class="row">
           <div class="col-12">
             <label for="emailId" class="form-label">Email</label>
-            <input id="emailId" type="email" class="form-control" placeholder="email@gmail.com" value=${param.email} aria-label="email">
+            <input id="emailId" type="email" class="form-control" placeholder="email@gmail.com" value=${param.email} aria-label="email" name="email">
           </div>
         </div>
         <div class="row">
           <div class="col-6">
             <label for="stateId" class="form-label">Provincia</label>
-            <input id="stateId" type="text" class="form-control" placeholder="Chubut" value=${param.state} aria-label="provincia">
+            <input id="stateId" type="text" class="form-control" placeholder="Chubut" value=${param.state} aria-label="state" name="state">
           </div>
           <div class="col-6">
             <label for="addressId" class="form-label">Dirección</label>
-            <input id="addressId" type="text" class="form-control" placeholder="Av. Siempreviva 1023" value=${param.address} aria-label="address">
+            <input id="addressId" type="text" class="form-control" placeholder="Av. Siempreviva 1023" value=${param.address} aria-label="address" name="address">
           </div>
         </div>
         <div class="row flex justify-content-around mt-3">

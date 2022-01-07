@@ -84,6 +84,7 @@
                     <td id="lastNameId" name="lastName"><%=p.getLastnames()%></td>
                     <td id="ageId" name="age"><%=p.getAge()%></td>
                     <td id="registeredDateId" name="registeredDate"><%=p.getRegisteredDate()%></td>
+
                     <td id="stateId" name="state"><%=p.getProvince()%></td>
                     <td id="emailId" name="email"><%=p.getEmail()%></td>
                     <td id="addressId" name="address"><%=p.getAddress()%></td>

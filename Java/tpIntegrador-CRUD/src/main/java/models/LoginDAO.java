@@ -17,16 +17,16 @@ public class LoginDAO {
         String[] args = {"email"};
         String[] whereValues = {email};
         ResultSet rs = db.selectionQuery(args, this.fromTable, args, whereValues);
-        return rs.first();
+        return rs.next();
     }
 
     public Boolean isPassOfEmail(String email, String pass) throws SQLException {
         //SELECT `email` FROM `administradores` WHERE `email`=email AND `contrasena` = pass;
         String[] args = {"email"};
         String[] whereParams = {"email", "contrasena"};
-        String[] whereValues = {email};
+        String[] whereValues = {email, pass};
         ResultSet rs = db.selectionQuery(args, this.fromTable, whereParams, whereValues);
-        return rs.first();
+        return rs.next();
     }
 
     public Boolean createUser(String email, String pass){

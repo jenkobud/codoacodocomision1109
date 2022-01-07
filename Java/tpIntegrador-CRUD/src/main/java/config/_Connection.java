@@ -22,7 +22,7 @@ public class _Connection {
 
     /* Function with the only purpose of "default" DB & usr connection */
     public static Connection getConection(){
-        return getConection("jdbc:mysql://localhost:3306/entregadb",
-                "root", ""); //En linux-pc usar puerto 7070 DELETE
+        //return getConection("jdbc:mysql://localhost:3306/entregadb","root", ""); //En windows-pc
+        return getConection("jdbc:mysql://localhost:7070/comision1109", "root", "");//En linux-pc
     }
 }
