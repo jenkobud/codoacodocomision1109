@@ -1,6 +1,7 @@
 <%@ page import="controllers.PartakersController" %>
 <%@ page import="models.PartakersDAO" %>
 <%@ page import="models.Partaker" %>
+<%@ page import="controllers.LoginController" %>
 <%--
   Created by IntelliJ IDEA.
   User: root
@@ -92,9 +93,10 @@
                         String editPartakerUrl = request.getContextPath() + "/partakers-modify.jsp"
                         + "?add=false&partakerId="+p.getId()+"&name='"+p.getNames()+"'&lastname='"+p.getLastnames()+"'&age="+p.getAge()+
                                 "&registeredDate='"+p.getRegisteredDate()+"'&state='"+p.getProvince()+"'&email='"+p.getEmail()+"'&address='"+p.getAddress()+"'";
+                        String removePartakerUrl = request.getContextPath() + "/PartakersController?remove='true'&id=" + p.getId();
                     %>
                     <td><a class="btn btn-warning "href="<%=editPartakerUrl%>">Edit</a></td>
-                    <td><a class="btn btn-danger" href="#">Remove</a></td>
+                    <td><a class="btn btn-danger" href="<%=removePartakerUrl%>">Remove</a></td>
                 </tr>
         <% } %>
         </tbody>
