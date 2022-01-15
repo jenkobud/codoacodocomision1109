@@ -15,9 +15,6 @@ import java.sql.SQLException;
 public class LoginController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        LoginDAO loginDAO = new LoginDAO();
-        DataBase dB = new DataBase(new _Connection());
-        RequestDispatcher dispatcher = null;
     }
 
     @Override
@@ -42,10 +39,7 @@ public class LoginController extends HttpServlet {
             pw.write("  <!-- Custom styles for this template -->");
             pw.write("  <link href=\"signin.css\" rel=\"stylesheet\">");
             pw.write("  <link rel=\"stylesheet\" href=\"general-style.css\">");
-            pw.write("");
             pw.write("  <meta name=\"theme-color\" content=\"#7952b3\">");
-            pw.write("");
-            pw.write("");
             pw.write("  <style>");
             pw.write("    .bd-placeholder-img {");
             pw.write("      font-size: 1.125rem;");
@@ -77,7 +71,10 @@ public class LoginController extends HttpServlet {
             pw.write("    crossorigin=\"anonymous\"></script>");
             pw.write("</body></html>");
             pw.close();
+            request.getSession().setAttribute("logged",false);
         } else {
+            request.getSession().setAttribute("logged",true);
+            request.getSession().setAttribute("user", email);
             response.sendRedirect(request.getContextPath() + "/partakers-abm.jsp");
         }
     }
