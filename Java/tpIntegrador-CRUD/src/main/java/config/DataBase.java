@@ -1,7 +1,5 @@
 package config;
 
-import com.mysql.cj.PreparedQuery;
-
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -19,22 +17,20 @@ public class DataBase {
             strBuilder.append(" * , ");
             argumentsToSelect = new String[]{};
         }
-        for (String s : argumentsToSelect) {
-            strBuilder.append("`" + s + "`, ");
-        }
+        for (String s : argumentsToSelect) { strBuilder.append("`" + s + "`, "); }
 
         strBuilder.delete(strBuilder.length() - 2, strBuilder.length());
         strBuilder.append(" FROM ");
-        for (String s : fromTables) {
-            strBuilder.append("`" + s + "`, ");
-        }
+        
+        for (String s : fromTables) { strBuilder.append("`" + s + "`, "); }
         strBuilder.delete(strBuilder.length() - 2, strBuilder.length());
+        
         if (whereArguments.length != 0) strBuilder.append(" WHERE ");
-        for (int i = 0; i < whereArguments.length; i++) {
-            strBuilder.append("`" + whereArguments[i] + "`='" + whereValues[i] + "' AND ");
-        }
+        for (int i = 0; i < whereArguments.length; i++) { strBuilder.append("`" + whereArguments[i] + "`='" + whereValues[i] + "' AND "); }
+        
         if (whereArguments.length != 0) strBuilder.delete(strBuilder.length() - 4, strBuilder.length());
         strBuilder.append(";");
+        
         PreparedStatement ps = _Connection.getConection().prepareStatement(strBuilder.toString());
         return ps.executeQuery();
     }
@@ -47,14 +43,15 @@ public class DataBase {
         for (String s : from) sB.append("`" + s + "` ,");
         sB.delete(sB.length() - 1, sB.length());
         sB.append("SET ");
-        for (int i = 0; i < args.length; i++) {
-            sB.append("`" + args[i] + "`='" + argsValue[i] + "',");
-        }
+        for (int i = 0; i < args.length; i++) { sB.append("`" + args[i] + "`='" + argsValue[i] + "',"); }
         sB.delete(sB.length() - 1, sB.length());
+
         sB.append(" WHERE ");
+
         for (int i = 0; i < whereArg.length; i++) sB.append("`" + whereArg[i] + "`=" + whereVal[i] + ",");
         sB.delete(sB.length() - 1, sB.length());
         sB.append(";");
+        
         PreparedStatement pS = _Connection.getConection().prepareStatement(sB.toString());
         pS.executeUpdate();
     }
@@ -65,16 +62,14 @@ public class DataBase {
 
         StringBuilder sB = new StringBuilder("INSERT INTO " + from + " (");
 
-        for (String arg : args) {
-            sB.append("`" + arg + "`,");
-        }
+        for (String arg : args) { sB.append("`" + arg + "`,"); }
         sB.delete(sB.length() - 1, sB.length());
+        
         sB.append(") VALUES (");
-        for (String v : argsValue) {
-            sB.append("'" + v + "',");
-        }
+        for (String v : argsValue) { sB.append("'" + v + "',"); }
         sB.delete(sB.length() - 1, sB.length());
         sB.append(");");
+
         PreparedStatement pS = _Connection.getConection().prepareStatement(sB.toString());
         pS.executeUpdate();
     }
@@ -87,6 +82,7 @@ public class DataBase {
         for (int i=0; i< args.length; i++){ sb.append("`"+args[i]+"`='"+argsValue[i]+"' AND "); }
         sb.delete(sb.length()-4, sb.length());
         sb.append(";");
+        
         PreparedStatement pS = _Connection.getConection().prepareStatement(sb.toString());
         pS.executeUpdate();
     }

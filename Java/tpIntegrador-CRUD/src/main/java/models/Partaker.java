@@ -29,67 +29,35 @@ public class Partaker {
         this.address = "";
     }
 
-    public String getProvince() {
-        return province;
-    }
+    public String getProvince() { return province; }
 
-    public void setProvince(String province) {
-        this.province = province;
-    }
+    public void setProvince(String province) { this.province = province; }
 
-    public Date getRegisteredDate() {
-        return registeredDate;
-    }
+    public Date getRegisteredDate() { return registeredDate; }
 
-    public void setRegisteredDate(Date registeredDate) {
-        this.registeredDate = registeredDate;
-    }
+    public void setRegisteredDate(Date registeredDate) { this.registeredDate = registeredDate; }
 
-    public Integer getAge() {
-        return age;
-    }
+    public Integer getAge() { return age; }
 
-    public void setAge(Integer age) {
-        this.age = age;
-    }
+    public void setAge(Integer age) { this.age = age; }
 
-    public String getNames() {
-        return names;
-    }
+    public String getNames() { return names; }
 
-    public void setNames(String names) {
-        this.names = names;
-    }
+    public void setNames(String names) { this.names = names; }
 
-    public String getLastnames() {
-        return lastnames;
-    }
+    public String getLastnames() { return lastnames; }
 
-    public void setLastnames(String lastnames) {
-        this.lastnames = lastnames;
-    }
+    public void setLastnames(String lastnames) { this.lastnames = lastnames; }
 
-    public String getEmail() {
-        return email;
-    }
+    public String getEmail() { return email; }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+    public void setEmail(String email) { this.email = email; }
 
-    public String getAddress() {
-        return address;
-    }
+    public String getAddress() { return address; }
 
-    public void setAddress(String address) {
-        this.address = address;
-    }
+    public void setAddress(String address) { this.address = address; }
 
-    public Integer getId() {
-        return id;
-    }
+    public Integer getId() { return id; }
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+    public void setId(Integer id) { this.id = id; }
 }

@@ -13,16 +13,13 @@ public class _Connection {
         try{
             Class.forName(driver);
             c = DriverManager.getConnection(url, usr, pass);
-            //Check that connection URL & USER are correct for my DB. DELETE
-        }catch(ClassNotFoundException | SQLException e){
-            System.out.println(e.toString());
-        }
+        }catch(ClassNotFoundException | SQLException e){ System.out.println(e.toString()); }
         return c;
     }
 
     /* Function with the only purpose of "default" DB & usr connection */
     public static Connection getConection(){
-        //return getConection("jdbc:mysql://localhost:3306/entregadb","root", ""); //En windows-pc
-        return getConection("jdbc:mysql://localhost:7070/comision1109", "root", "");//En linux-pc
+        return getConection("jdbc:mysql://localhost:3306/comision1109","root", ""); //En windows-pc con puerto SQL default (3306).
+        //return getConection("jdbc:mysql://localhost:7070/comision1109", "root", "");//En linux-pc con puerto SQL personalizado.
     }
 }

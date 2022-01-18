@@ -16,8 +16,6 @@ public class PartakersController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String remove = request.getParameter("remove");
         Integer id = Integer.parseInt(request.getParameter("id"));
-        System.out.println("remove -> "+ remove); //REMOVE ONCE TESTED.
-        System.out.println("id -> "+ id); //REMOVE ONCE TESTED.
         PartakersDAO partakersDAO = new PartakersDAO();
         response.setContentType("text/html");
         PrintWriter pw = response.getWriter();
@@ -93,9 +91,7 @@ public class PartakersController extends HttpServlet {
         try {
             if (isNewUser){ partakersDAO.addNewPartaker(name, lastname, age, registeredDate, state, email, address); }
             else{ partakersDAO.modifyPartakerById(id, name, lastname, age, registeredDate, state, email, address); }
-        }catch (SQLException e){
-            e.printStackTrace();
-        }
+        }catch (SQLException e){ e.printStackTrace(); }
 
         response.sendRedirect(request.getContextPath()+"/partakers-abm.jsp");
     }

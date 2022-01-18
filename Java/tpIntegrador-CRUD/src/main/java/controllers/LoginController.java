@@ -1,7 +1,5 @@
 package controllers;
 
-import config.DataBase;
-import config._Connection;
 import models.LoginDAO;
 
 import javax.servlet.*;
