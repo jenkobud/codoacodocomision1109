@@ -2,6 +2,7 @@
 <%@ page import="models.PartakersDAO" %>
 <%@ page import="models.Partaker" %>
 <%@ page import="controllers.LoginController" %>
+<%@ page import="java.sql.SQLException" %>
 <%--
   Created by IntelliJ IDEA.
   User: root
@@ -124,7 +125,10 @@
                     <td><a class="btn btn-warning" href="<%=editPartakerUrl%>"><i class="bi bi-pencil-square"></i></a></td>
                     <td><a class="btn btn-danger" href="<%=removePartakerUrl%>"><i class="bi bi-trash"></i></a></td>
                 </tr>
-        <% } %>
+        <% }
+            try { partakersDAO.closeDB(); }
+            catch (SQLException e) { e.printStackTrace(); }
+        %>
         </tbody>
     </table>
     <div class="flex text-center">

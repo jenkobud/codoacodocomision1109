@@ -42,6 +42,15 @@
         font-size: 3.5rem;
       }
     }
+    @keyframes expand-tr {
+      to{
+        font-size: 1.1em;
+      }
+    }
+    tbody tr:hover{
+      animation: expand-tr 500ms 1;
+      animation-fill-mode: forwards;
+    }
   </style>
 
 </head>

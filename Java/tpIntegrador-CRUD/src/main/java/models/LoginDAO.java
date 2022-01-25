@@ -7,9 +7,8 @@ import config._Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class LoginDAO {
+public class LoginDAO extends DAOClass{
     private String[] fromTable = {"administradores"};
-    private DataBase db;
     public LoginDAO(){ db = new DataBase(new _Connection()); }
 
     public Boolean isEmailInDB(String email) throws SQLException {

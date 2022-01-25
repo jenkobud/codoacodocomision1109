@@ -9,9 +9,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PartakersDAO {
+public class PartakersDAO extends DAOClass{
 
-    private DataBase db;
     private String[] from = {"participantes"};
 
     public PartakersDAO(){ db = new DataBase(new _Connection()); }

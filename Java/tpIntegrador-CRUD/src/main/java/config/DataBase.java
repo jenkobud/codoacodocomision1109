@@ -9,10 +9,10 @@ public class DataBase {
 
     public DataBase(_Connection c) { this.c = c; }
 
+
     public ResultSet selectionQuery(String[] argumentsToSelect, String[] fromTables, String[] whereArguments, String[] whereValues) throws SQLException {
         StringBuilder strBuilder = new StringBuilder();
         strBuilder.append("SELECT ");
-        //strBuilder.append(argumentsToSelect);
         if (argumentsToSelect[0].equals("*")) {
             strBuilder.append(" * , ");
             argumentsToSelect = new String[]{};
@@ -30,9 +30,10 @@ public class DataBase {
         
         if (whereArguments.length != 0) strBuilder.delete(strBuilder.length() - 4, strBuilder.length());
         strBuilder.append(";");
-        
-        PreparedStatement ps = _Connection.getConection().prepareStatement(strBuilder.toString());
-        return ps.executeQuery();
+
+        PreparedStatement ps = this.c.getConnection().prepareStatement(strBuilder.toString());
+        ResultSet rs = ps.executeQuery();
+        return rs;
     }
 
     public void updateQuery(String[] from, String[] args, String[] argsValue, String[] whereArg, String[] whereVal) throws SQLException {
@@ -52,8 +53,9 @@ public class DataBase {
         sB.delete(sB.length() - 1, sB.length());
         sB.append(";");
         
-        PreparedStatement pS = _Connection.getConection().prepareStatement(sB.toString());
+        PreparedStatement pS = this.c.getConnection().prepareStatement(sB.toString());
         pS.executeUpdate();
+        pS.close();
     }
 
     public void insertQuery(String from, String[] args, String[] argsValue) throws SQLException {
@@ -70,8 +72,9 @@ public class DataBase {
         sB.delete(sB.length() - 1, sB.length());
         sB.append(");");
 
-        PreparedStatement pS = _Connection.getConection().prepareStatement(sB.toString());
+        PreparedStatement pS = this.c.getConnection().prepareStatement(sB.toString());
         pS.executeUpdate();
+        pS.close();
     }
 
 
@@ -83,7 +86,10 @@ public class DataBase {
         sb.delete(sb.length()-4, sb.length());
         sb.append(";");
         
-        PreparedStatement pS = _Connection.getConection().prepareStatement(sb.toString());
+        PreparedStatement pS = this.c.getConnection().prepareStatement(sb.toString());
         pS.executeUpdate();
+        pS.close();
     }
+
+    public Boolean closeDBConnection() throws SQLException { return this.c.endConnection(); }
 }

@@ -13,6 +13,7 @@ import java.sql.SQLException;
 public class LoginController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        //auto-generated
     }
 
     @Override
@@ -80,7 +81,9 @@ public class LoginController extends HttpServlet {
     private Boolean loginDataChecker(String email, String pass) {
         LoginDAO lDAO = new LoginDAO();
         try {
-            return (lDAO.isEmailInDB(email) && lDAO.isPassOfEmail(email, pass));
+            Boolean isChecked = (lDAO.isEmailInDB(email) && lDAO.isPassOfEmail(email, pass));
+            lDAO.closeDB();
+            return isChecked;
         } catch (SQLException e) {
             e.printStackTrace();
             return false;

@@ -91,8 +91,8 @@ public class PartakersController extends HttpServlet {
         try {
             if (isNewUser){ partakersDAO.addNewPartaker(name, lastname, age, registeredDate, state, email, address); }
             else{ partakersDAO.modifyPartakerById(id, name, lastname, age, registeredDate, state, email, address); }
+            partakersDAO.closeDB();
         }catch (SQLException e){ e.printStackTrace(); }
-
         response.sendRedirect(request.getContextPath()+"/partakers-abm.jsp");
     }
 }

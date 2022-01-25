@@ -73,4 +73,5 @@ ul li{
 
 ul li:hover{
     animation: menu 500ms 1;
+    animation-fill-mode: forwards;
 }
